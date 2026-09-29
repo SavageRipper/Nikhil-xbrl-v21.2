@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const root = new URL('..', import.meta.url);
+const model=JSON.parse(fs.readFileSync(new URL('TAXONOMY_MODEL.json',root),'utf8'));
+const dimensional=model.tables.filter(t=>t.axisCount>0);
+assert.equal(dimensional.length,87);
+assert.equal(model.tables.filter(t=>t.axisCount===0).length,5);
+assert.equal(model.typedDomainElements.length,44);
+assert.ok(model.typedDomainElements.every(x=>x.typedDomainRef));
+assert.ok(model.tables.every(t=>t.role&&t.tableQ&&Number.isInteger(t.axisCount)&&Number.isInteger(t.lineItemCount)));
+console.log('V18 taxonomy-model checks: PASS');
