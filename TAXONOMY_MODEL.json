@@ -1,0 +1,1134 @@
+{
+  "meta": {
+    "taxonomyVersion": "C&I Taxonomy 2016 V1.2 / 31-03-2016",
+    "businessRulesVersion": "C&I Business Rules V1.3 / 06-08-2016",
+    "schemaNamespace": "http://www.icai.org/xbrl/taxonomy/2016-03-31/in-gaap",
+    "entityNamespace": "http://www.icai.org/xbrl/taxonomy/2016-03-31/in-gaap/in-ci-ent",
+    "schemaEnvironment": "https://www.mca.gov.in/V3XBRL/",
+    "sourceFiles": [
+      "Final C and I Taxonomy 2016 V1.2@31-03-2016.zip",
+      "MCA_XBRL_Valiation_Tool_V5.1@02-12-2025.zip",
+      "Final Business Rules based on XBRL C and I Taxonomy 2016 V1.3@06-08-2016.zip"
+    ],
+    "elrCount": 47,
+    "elementCount": 3616,
+    "presentationCount": 4092,
+    "calculationCount": 1051,
+    "definitionCount": 2967,
+    "typedDomainCount": 44,
+    "primaryTableCount": 92,
+    "dimensionalTableRoleCount": 87,
+    "taxonomyWorkbook": "Taxonomy-2016-03-31.xlsx",
+    "taxonomyModelNote": "Definition nodes retain descriptive nodeType; typedDomainRef, label variants and references are retained from the supplied taxonomy workbook."
+  },
+  "tables": [
+    {
+      "role": "[200100] Notes - Share capital",
+      "tableQ": "in-gaap:DisclosureOfClassesOfShareCapitalTable",
+      "label": "Disclosure of classes of share capital [Table]",
+      "axisCount": 1,
+      "lineItemCount": 101,
+      "axes": [
+        "in-gaap:ClassesOfShareCapitalAxis"
+      ]
+    },
+    {
+      "role": "[200100a] Notes - Share capital",
+      "tableQ": "in-gaap:DisclosureOfShareholdingMoreThanFivePerCentInCompanyTable",
+      "label": "Disclosure of shareholding more than five per cent in company [Table]",
+      "axisCount": 2,
+      "lineItemCount": 7,
+      "axes": [
+        "in-gaap:ClassesOfShareCapitalAxis",
+        "in-gaap:NameOfShareholderAxis"
+      ]
+    },
+    {
+      "role": "[200200] Notes - Reserves and surplus",
+      "tableQ": "in-gaap:StatementOfChangesInReservesTable",
+      "label": "Statement of changes in reserves [Table]",
+      "axisCount": 1,
+      "lineItemCount": 40,
+      "axes": [
+        "in-gaap:ComponentsOfReservesAxis"
+      ]
+    },
+    {
+      "role": "[200300] Notes - Borrowings",
+      "tableQ": "in-gaap:ClassificationOfBorrowingsTable",
+      "label": "Classification of borrowings [Table]",
+      "axisCount": 3,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:ClassificationBasedOnTimePeriodAxis",
+        "in-gaap:ClassificationOfBorrowingsAxis",
+        "in-gaap:SubclassificationOfBorrowingsAxis"
+      ]
+    },
+    {
+      "role": "[200600] Notes - Subclassification and notes on liabilities and assets",
+      "tableQ": "in-gaap:DisclosureOfBreakupOfProvisionsTable",
+      "label": "Disclosure of breakup of provisions [Table]",
+      "axisCount": 1,
+      "lineItemCount": 32,
+      "axes": [
+        "in-gaap:ClassificationBasedOnTimePeriodAxis"
+      ]
+    },
+    {
+      "role": "[200600c] Notes - Subclassification and notes on liabilities and assets",
+      "tableQ": "in-gaap:LoansAndAdvancesTable",
+      "label": "Loans and advances [Table]",
+      "axisCount": 3,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:ClassificationBasedOnTimePeriodAxis",
+        "in-gaap:ClassificationOfLoansAndAdvancesAxis",
+        "in-gaap:ClassificationOfAssetsBasedOnSecurityAxis"
+      ]
+    },
+    {
+      "role": "[200300a] Notes - Borrowings",
+      "tableQ": "in-gaap:DetailsOfBondsOrDebenturesTable",
+      "label": "Details of bonds or debentures [Table]",
+      "axisCount": 1,
+      "lineItemCount": 12,
+      "axes": [
+        "in-gaap:DetailsOfBondsOrDebenturesAxis"
+      ]
+    },
+    {
+      "role": "[200400] Notes - Non-current investments",
+      "tableQ": "in-gaap:DetailsOfNoncurrentInvestmentsTable",
+      "label": "Details of non-current investments [Table]",
+      "axisCount": 1,
+      "lineItemCount": 19,
+      "axes": [
+        "in-gaap:ClassificationOfNoncurrentInvestmentsAxis"
+      ]
+    },
+    {
+      "role": "[200401] Notes - Non-current investments/total",
+      "tableQ": "in-gaap:DetailsOfNoncurrentInvestmentsTable",
+      "label": "Details of non-current investments [Table]",
+      "axisCount": 0,
+      "lineItemCount": 1,
+      "axes": []
+    },
+    {
+      "role": "[200500] Notes - Current investments",
+      "tableQ": "in-gaap:DetailsOfCurrentInvestmentsTable",
+      "label": "Details of current investments [Table]",
+      "axisCount": 1,
+      "lineItemCount": 18,
+      "axes": [
+        "in-gaap:ClassificationOfCurrentInvestmentsAxis"
+      ]
+    },
+    {
+      "role": "[200501] Notes - Current investments/total",
+      "tableQ": "in-gaap:DetailsOfCurrentInvestmentsTable",
+      "label": "Details of current investments [Table]",
+      "axisCount": 0,
+      "lineItemCount": 1,
+      "axes": []
+    },
+    {
+      "role": "[200600a] Notes - Subclassification and notes on liabilities and assets",
+      "tableQ": "in-gaap:DisclosureOfDetailsOfProducingPropertiesTable",
+      "label": "Disclosure of details of producing properties [Table]",
+      "axisCount": 1,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:DetailsOfProducingPropertiesAxis"
+      ]
+    },
+    {
+      "role": "[200600b] Notes - Subclassification and notes on liabilities and assets",
+      "tableQ": "in-gaap:DisclosureOfDetailsOfPreproducingPropertiesTable",
+      "label": "Disclosure of details of preproducing properties [Table]",
+      "axisCount": 2,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:ClassesOfPreproducingPropertiesAxis",
+        "in-gaap:DetailsOfPreproducingPropertiesAxis"
+      ]
+    },
+    {
+      "role": "[200600d] Notes - Subclassification and notes on liabilities and assets",
+      "tableQ": "in-gaap:ClassificationOfLongTermTradeReceivablesTable",
+      "label": "Classification of long-term trade receivables [Table]",
+      "axisCount": 1,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:ClassificationOfAssetsBasedOnSecurityAxis"
+      ]
+    },
+    {
+      "role": "[200600f] Notes - Subclassification and notes on liabilities and assets",
+      "tableQ": "in-gaap:SubclassificationOfTradeReceivablesTable",
+      "label": "Subclassification of trade receivables [Table]",
+      "axisCount": 1,
+      "lineItemCount": 13,
+      "axes": [
+        "in-gaap:ClassificationOfAssetsBasedOnSecurityAxis"
+      ]
+    },
+    {
+      "role": "[200600e] Notes - Subclassification and notes on liabilities and assets",
+      "tableQ": "in-gaap:ClassificationOfInventoriesTable",
+      "label": "Classification of inventories [Table]",
+      "axisCount": 1,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:ClassificationOfInventoriesAxis"
+      ]
+    },
+    {
+      "role": "[300600c] Notes - Additional information statement of profit and loss",
+      "tableQ": "in-gaap:DetailsOfWorkInProgressTable",
+      "label": "Details of work-in-progress [Table]",
+      "axisCount": 1,
+      "lineItemCount": 2,
+      "axes": [
+        "in-gaap:CategoriesOfWorkInProgressAxis"
+      ]
+    },
+    {
+      "role": "[200600g] Notes - Subclassification and notes on liabilities and assets",
+      "tableQ": "in-ca:DisclosureOfDetailsOfBalancesWithBanksTable",
+      "label": "Disclosure of details of balances with banks [Table]",
+      "axisCount": 1,
+      "lineItemCount": 0,
+      "axes": [
+        "in-ca:DetailsOfBalancesWithBanksAxis"
+      ]
+    },
+    {
+      "role": "[200600h] Notes - Subclassification and notes on liabilities and assets",
+      "tableQ": "in-ca:DisclosureOfDetailsOfBalancesWithForeignBanksTable",
+      "label": "Disclosure of details of balances with foreign banks [Table]",
+      "axisCount": 1,
+      "lineItemCount": 0,
+      "axes": [
+        "in-ca:DetailsOfBalancesWithForeignBanksAxis"
+      ]
+    },
+    {
+      "role": "[200700] Notes - Additional disclosures on balance sheet",
+      "tableQ": "in-gaap:DetailsOfDisclosuresRequiredUnderMSMEDAct2006Table",
+      "label": "Details of disclosures required under MSMED Act 2006 [Table]",
+      "axisCount": 1,
+      "lineItemCount": 12,
+      "axes": [
+        "in-gaap:MicroSmallMediumEnterprisesAxis"
+      ]
+    },
+    {
+      "role": "[200700a] Notes - Additional disclosures on balance sheet",
+      "tableQ": "in-gaap:AcquisitionAndDisposalOfInvestmentsTable",
+      "label": "Acquisition and disposal of investments [Table]",
+      "axisCount": 1,
+      "lineItemCount": 7,
+      "axes": [
+        "in-gaap:AcquisitionAndDisposalOfInvestmentsAxis"
+      ]
+    },
+    {
+      "role": "[200700b] Notes - Additional disclosures on balance sheet",
+      "tableQ": "in-ca:DetailsOfShareholdingPatternOfPromotersAndPublicTable",
+      "label": "Details of shareholding pattern of promoters and public [Table]",
+      "axisCount": 2,
+      "lineItemCount": 30,
+      "axes": [
+        "in-ca:ShareholdingPatternOfPromotersAndPublicAxis",
+        "in-ca:ClassificationBasedOnNationalityOrOriginAxis"
+      ]
+    },
+    {
+      "role": "[400400d] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsOfShareholdingPatternTable",
+      "label": "Details of shareholding pattern [Table]",
+      "axisCount": 1,
+      "lineItemCount": 5,
+      "axes": [
+        "in-ca:ShareholdingPatternAxis"
+      ]
+    },
+    {
+      "role": "[201000] Notes - Tangible assets",
+      "tableQ": "in-gaap:DisclosureOfTangibleAssetsTable",
+      "label": "Disclosure of tangible assets [Table]",
+      "axisCount": 3,
+      "lineItemCount": 19,
+      "axes": [
+        "in-gaap:ClassesOfTangibleAssetsAxis",
+        "in-gaap:SubClassesOfTangibleAssetsAxis",
+        "in-gaap:CarryingAmountAccumulatedDepreciationAndGrossCarryingAmountAxis"
+      ]
+    },
+    {
+      "role": "[201000a] Notes - Tangible assets",
+      "tableQ": "in-gaap:DisclosureOfAdditionalInformationTangibleAssetsTable",
+      "label": "Disclosure of additional information tangible assets [Table]",
+      "axisCount": 2,
+      "lineItemCount": 18,
+      "axes": [
+        "in-gaap:ClassesOfTangibleAssetsAxis",
+        "in-gaap:SubClassesOfTangibleAssetsAxis"
+      ]
+    },
+    {
+      "role": "[201100] Notes - Intangible assets",
+      "tableQ": "in-gaap:DisclosureOfIntangibleAssetsTable",
+      "label": "Disclosure of intangible assets [Table]",
+      "axisCount": 3,
+      "lineItemCount": 23,
+      "axes": [
+        "in-gaap:ClassesOfIntangibleAssetsAxis",
+        "in-gaap:SubClassesOfIntangibleAssetsAxis",
+        "in-gaap:CarryingAmountAccumulatedAmortizationAndImpairmentAndGrossCarryingAmountAxis"
+      ]
+    },
+    {
+      "role": "[201100a] Notes - Intangible assets",
+      "tableQ": "in-gaap:DisclosureOfAdditionalInformationIntangibleAssetsTable",
+      "label": "Disclosure of additional information intangible assets [Table]",
+      "axisCount": 2,
+      "lineItemCount": 11,
+      "axes": [
+        "in-gaap:ClassesOfIntangibleAssetsAxis",
+        "in-gaap:SubClassesOfIntangibleAssetsAxis"
+      ]
+    },
+    {
+      "role": "[201100b] Notes - Intangible assets",
+      "tableQ": "in-gaap:DisclosureOfInformationOnMaterialIndividualIntangibleAssetsTable",
+      "label": "Disclosure of information on material individual intangible assets [Table]",
+      "axisCount": 1,
+      "lineItemCount": 3,
+      "axes": [
+        "in-gaap:MaterialIndividualIntangibleAssetsAxis"
+      ]
+    },
+    {
+      "role": "[201200] Notes - Employee benefits",
+      "tableQ": "in-gaap:DisclosureOfDefinedBenefitPlansTable",
+      "label": "Disclosure of defined benefit plans [Table]",
+      "axisCount": 2,
+      "lineItemCount": 97,
+      "axes": [
+        "in-gaap:DefinedBenefitPlansAxis",
+        "in-gaap:DefinedBenefitPlansCategoriesAxis"
+      ]
+    },
+    {
+      "role": "[201300] Notes - Segments",
+      "tableQ": "in-gaap:DisclosureOfPrimaryReportableSegmentsTable",
+      "label": "Disclosure of primary reportable segments [Table]",
+      "axisCount": 1,
+      "lineItemCount": 20,
+      "axes": [
+        "in-gaap:EnterprisesPrimaryReportableSegmentsAxis"
+      ]
+    },
+    {
+      "role": "[201500a] Notes - Impairment",
+      "tableQ": "in-gaap:DisclosureOfImpairmentOfAssetsInPrimarySegmentDisclosureFormatTable",
+      "label": "Disclosure of impairment of assets in primary segment disclosure format [Table]",
+      "axisCount": 1,
+      "lineItemCount": 4,
+      "axes": [
+        "in-gaap:PrimaryReportableSegmentsAxis"
+      ]
+    },
+    {
+      "role": "[201500b] Notes - Impairment",
+      "tableQ": "in-gaap:DisclosureOfImpairmentLossRecognisedOrReversedTable",
+      "label": "Disclosure of impairment loss recognised or reversed [Table]",
+      "axisCount": 3,
+      "lineItemCount": 11,
+      "axes": [
+        "in-gaap:IndividualAssetsOrCashGeneratingUnitsAxis",
+        "in-gaap:ClassesOfAssetsAxis",
+        "in-gaap:PrimaryReportableSegmentsAxis"
+      ]
+    },
+    {
+      "role": "[201300a] Notes - Segments",
+      "tableQ": "in-gaap:DisclosureOfSecondaryReportableSegmentsTable",
+      "label": "Disclosure of secondary reportable segments [Table]",
+      "axisCount": 1,
+      "lineItemCount": 20,
+      "axes": [
+        "in-gaap:EnterprisesSecondaryReportableSegmentsAxis"
+      ]
+    },
+    {
+      "role": "[201300b] Notes - Segments",
+      "tableQ": "in-gaap:AdditionalGeographicalDisclosureOfRevenueFromCustomersBasedOnCustomerLocationTable",
+      "label": "Additional geographical disclosure of revenue from customers based on customer location [Table]",
+      "axisCount": 1,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:GeographicalDisclosureOfRevenueFromCustomersBasedOnCustomerLocationAxis"
+      ]
+    },
+    {
+      "role": "[201300c] Notes - Segments",
+      "tableQ": "in-gaap:AdditionalGeographicalDisclosureOfDetailsOnAssetsBasedOnLocationOfAssetsTable",
+      "label": "Additional geographical disclosure of details on assets based on location of assets [Table]",
+      "axisCount": 1,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:GeographicalDisclosureOfDetailsOnAssetsBasedOnLocationOfAssetsAxis"
+      ]
+    },
+    {
+      "role": "[201400] Notes - Leases",
+      "tableQ": "in-gaap:DisclosureOfMinimumFinanceLeasePaymentsAndPresentValueByLesseeTable",
+      "label": "Disclosure of minimum finance lease payments and present value by lessee [Table]",
+      "axisCount": 1,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:MaturityAxis"
+      ]
+    },
+    {
+      "role": "[201400a] Notes - Leases",
+      "tableQ": "in-gaap:DisclosureOfMinimumOperatingLeasePaymentsByLesseeTable",
+      "label": "Disclosure of minimum operating lease payments by lessee [Table]",
+      "axisCount": 1,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:MaturityAxis"
+      ]
+    },
+    {
+      "role": "[201400b] Notes - Leases",
+      "tableQ": "in-gaap:DisclosureOfGrossInvestmentInLeaseAndPresentValueOfMinimumLeasePaymentsReceivableInFinanceLeaseByLessorTable",
+      "label": "Disclosure of gross investment in lease and present value of minimum lease payments receivable in finance lease by lessor [Table]",
+      "axisCount": 1,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:MaturityAxis"
+      ]
+    },
+    {
+      "role": "[201400c] Notes - Leases",
+      "tableQ": "in-gaap:DisclosureOfFutureMinimumLeasePaymentsReceivableUnderNonCancellableOperatingLeasesByLessorTable",
+      "label": "Disclosure of future minimum lease payments receivable under non cancellable operating leases by lessor [Table]",
+      "axisCount": 1,
+      "lineItemCount": 1,
+      "axes": [
+        "in-gaap:MaturityAxis"
+      ]
+    },
+    {
+      "role": "[201500] Notes - Impairment",
+      "tableQ": "in-gaap:DisclosureOfImpairmentLossAndReversalOfImpairmentLossTable",
+      "label": "Disclosure of impairment loss and reversal of impairment loss [Table]",
+      "axisCount": 1,
+      "lineItemCount": 6,
+      "axes": [
+        "in-gaap:ClassesOfAssetsAxis"
+      ]
+    },
+    {
+      "role": "[201600] Notes - Related party",
+      "tableQ": "in-gaap:DisclosureOfRelationshipAndTransactionsBetweenRelatedPartiesTable",
+      "label": "Disclosure of relationship and transactions between related parties [Table]",
+      "axisCount": 1,
+      "lineItemCount": 107,
+      "axes": [
+        "in-gaap:CategoriesOfRelatedPartiesAxis"
+      ]
+    },
+    {
+      "role": "[201601] Notes - Related party/total",
+      "tableQ": "in-gaap:DisclosureOfRelationshipAndTransactionsBetweenRelatedPartiesTable",
+      "label": "Disclosure of relationship and transactions between related parties [Table]",
+      "axisCount": 0,
+      "lineItemCount": 4,
+      "axes": []
+    },
+    {
+      "role": "[202000] Notes - Discontinuing operations",
+      "tableQ": "in-gaap:DisclosureOfDiscontinuedOperationsTable",
+      "label": "Disclosure of discontinuing operations [Table]",
+      "axisCount": 1,
+      "lineItemCount": 33,
+      "axes": [
+        "in-gaap:DisclosureOfDiscontinuedOperationsAxis"
+      ]
+    },
+    {
+      "role": "[202001] Notes - Discontinuing operations/total",
+      "tableQ": "in-gaap:DisclosureOfDiscontinuedOperationsTable",
+      "label": "Disclosure of discontinuing operations [Table]",
+      "axisCount": 0,
+      "lineItemCount": 3,
+      "axes": []
+    },
+    {
+      "role": "[202100] Notes - Other provisions, contingent liabilities and contingent assets",
+      "tableQ": "in-gaap:DisclosureOfOtherProvisionsTable",
+      "label": "Disclosure of other provisions [Table]",
+      "axisCount": 1,
+      "lineItemCount": 14,
+      "axes": [
+        "in-gaap:ClassesOfOtherProvisionsAxis"
+      ]
+    },
+    {
+      "role": "[202100a] Notes - Other provisions, contingent liabilities and contingent assets",
+      "tableQ": "in-gaap:DisclosureOfContingentLiabilitiesTable",
+      "label": "Disclosure of contingent liabilities [Table]",
+      "axisCount": 1,
+      "lineItemCount": 5,
+      "axes": [
+        "in-gaap:ClassesOfContingentLiabilitiesAxis"
+      ]
+    },
+    {
+      "role": "[202300] Notes - Amalgamation",
+      "tableQ": "in-gaap:DisclosureOfAmalgamationsTable",
+      "label": "Disclosure of amalgamations [Table]",
+      "axisCount": 1,
+      "lineItemCount": 20,
+      "axes": [
+        "in-gaap:AmalgamationsAxis"
+      ]
+    },
+    {
+      "role": "[202400] Notes - Investments in associates",
+      "tableQ": "in-gaap:DescriptionOfInformationOfAssociatesTable",
+      "label": "Description of information of associates [Table]",
+      "axisCount": 1,
+      "lineItemCount": 33,
+      "axes": [
+        "in-gaap:InvestmentsInAssociatesAxis"
+      ]
+    },
+    {
+      "role": "[202400a] Notes - Investments in associates",
+      "tableQ": "in-ca:DetailsOfAssociatesWhichAreYetToCommenceOperationsTable",
+      "label": "Details of associates which are yet to commence operations [Table]",
+      "axisCount": 1,
+      "lineItemCount": 6,
+      "axes": [
+        "in-gaap:AssociatesWhichAreYetToCommenceOperationsAxis"
+      ]
+    },
+    {
+      "role": "[202400b] Notes - Investments in associates",
+      "tableQ": "in-ca:DetailsOfAssociatesLiquidatedOrSoldDuringYearTable",
+      "label": "Details of associates liquidated or sold during year [Table]",
+      "axisCount": 1,
+      "lineItemCount": 6,
+      "axes": [
+        "in-gaap:AssociatesLiquidatedOrSoldDuringYearAxis"
+      ]
+    },
+    {
+      "role": "[202500] Notes - Financial reporting of interests in joint ventures",
+      "tableQ": "in-gaap:DisclosureOfInterestsInSignificantJointVenturesTable",
+      "label": "Disclosure of interests in significant joint ventures [Table]",
+      "axisCount": 1,
+      "lineItemCount": 18,
+      "axes": [
+        "in-gaap:InterestsInSignificantJointVenturesAxis"
+      ]
+    },
+    {
+      "role": "[202500a] Notes - Financial reporting of interests in joint ventures",
+      "tableQ": "in-ca:DetailsOfJointVenturesWhichAreYetToCommenceOperationsTable",
+      "label": "Details of joint ventures which are yet to commence operations [Table]",
+      "axisCount": 1,
+      "lineItemCount": 6,
+      "axes": [
+        "in-gaap:JointVenturesWhichAreYetToCommenceOperationsAxis"
+      ]
+    },
+    {
+      "role": "[202500b] Notes - Financial reporting of interests in joint ventures",
+      "tableQ": "in-ca:DetailsOfJointVenturesLiquidatedOrSoldDuringYearTable",
+      "label": "Details of joint ventures liquidated or sold during year [Table]",
+      "axisCount": 1,
+      "lineItemCount": 6,
+      "axes": [
+        "in-gaap:JointVenturesLiquidatedOrSoldDuringYearAxis"
+      ]
+    },
+    {
+      "role": "[202600] Notes - Consolidated financial statements",
+      "tableQ": "in-gaap:DisclosureOfDetailsOfSubsidiariesTable",
+      "label": "Disclosure of details of subsidiaries [Table]",
+      "axisCount": 1,
+      "lineItemCount": 10,
+      "axes": [
+        "in-gaap:SubsidiariesAxis"
+      ]
+    },
+    {
+      "role": "[202600a] Notes - Consolidated financial statements",
+      "tableQ": "in-gaap:DisclosureOfDetailsOfEntitiesConsolidatedTable",
+      "label": "Disclosure of details of entities consolidated [Table]",
+      "axisCount": 1,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:EntitiesConsolidatedAxis"
+      ]
+    },
+    {
+      "role": "[202800] Notes - Subsidiary information",
+      "tableQ": "in-ca:DetailsOfSubsidiariesTable",
+      "label": "Details of subsidiaries [Table]",
+      "axisCount": 1,
+      "lineItemCount": 28,
+      "axes": [
+        "in-gaap:SubsidiariesAxis"
+      ]
+    },
+    {
+      "role": "[202800a] Notes - Subsidiary information",
+      "tableQ": "in-ca:DetailsOfSubsidiariesWhichAreYetToCommenceOperationsTable",
+      "label": "Details of subsidiaries which are yet to commence operations [Table]",
+      "axisCount": 1,
+      "lineItemCount": 6,
+      "axes": [
+        "in-gaap:SubsidiariesWhichAreYetToCommenceOperationsAxis"
+      ]
+    },
+    {
+      "role": "[202800b] Notes - Subsidiary information",
+      "tableQ": "in-ca:DetailsOfSubsidiariesLiquidatedOrSoldDuringYearTable",
+      "label": "Details of subsidiaries liquidated or sold during year [Table]",
+      "axisCount": 1,
+      "lineItemCount": 6,
+      "axes": [
+        "in-gaap:SubsidiariesLiquidatedOrSoldDuringYearAxis"
+      ]
+    },
+    {
+      "role": "[300400] Notes - Employee share-based payments",
+      "tableQ": "in-gaap:DisclosureOfTermsAndConditionsOfEmployeeSharebasedPaymentArrangementTable",
+      "label": "Disclosure of terms and conditions of employee share-based payment arrangement [Table]",
+      "axisCount": 1,
+      "lineItemCount": 9,
+      "axes": [
+        "in-gaap:TypesOfEmployeeSharebasedPaymentArrangementsAxis"
+      ]
+    },
+    {
+      "role": "[300400a] Notes - Employee share-based payments",
+      "tableQ": "in-gaap:DisclosureOfNumberAndWeightedAverageExercisePricesOfStockOptionsTable",
+      "label": "Disclosure of number and weighted average exercise prices of stock options [Table]",
+      "axisCount": 1,
+      "lineItemCount": 2,
+      "axes": [
+        "in-gaap:GroupsOfStockOptionsAxis"
+      ]
+    },
+    {
+      "role": "[300400b] Notes - Employee share-based payments",
+      "tableQ": "in-gaap:DisclosureOfNumberAndWeightedAverageRemainingContractualLifeOfOutstandingStockOptionsTable",
+      "label": "Disclosure of number and weighted average remaining contractual life of outstanding stock options [Table]",
+      "axisCount": 1,
+      "lineItemCount": 2,
+      "axes": [
+        "in-gaap:RangesOfExercisePricesForOutstandingStockOptionsAxis"
+      ]
+    },
+    {
+      "role": "[300600] Notes - Additional information statement of profit and loss",
+      "tableQ": "in-gaap:DetailsOfRawMaterialsConsumedTable",
+      "label": "Details of raw materials consumed [Table]",
+      "axisCount": 1,
+      "lineItemCount": 2,
+      "axes": [
+        "in-gaap:CategoriesOfRawMaterialsConsumedAxis"
+      ]
+    },
+    {
+      "role": "[300600a] Notes - Additional information statement of profit and loss",
+      "tableQ": "in-gaap:DetailsOfGoodsPurchasedTable",
+      "label": "Details of goods purchased [Table]",
+      "axisCount": 1,
+      "lineItemCount": 2,
+      "axes": [
+        "in-gaap:CategoriesOfGoodsPurchasedAxis"
+      ]
+    },
+    {
+      "role": "[300600b] Notes - Additional information statement of profit and loss",
+      "tableQ": "in-gaap:DetailsOfManufacturedAndTradedGoodsTable",
+      "label": "Details of manufactured and traded goods [Table]",
+      "axisCount": 1,
+      "lineItemCount": 4,
+      "axes": [
+        "in-gaap:CategoriesOfManufacturedAndTradedGoodsAxis"
+      ]
+    },
+    {
+      "role": "[300600d] Notes - Additional information statement of profit and loss",
+      "tableQ": "in-gaap:DetailsOfPurchasesAndSalesOfTradingCompaniesTable",
+      "label": "Details of purchases and sales of trading companies [Table]",
+      "axisCount": 1,
+      "lineItemCount": 3,
+      "axes": [
+        "in-gaap:CategoriesOfTradedGoodsAxis"
+      ]
+    },
+    {
+      "role": "[300600e] Notes - Additional information statement of profit and loss",
+      "tableQ": "in-gaap:DetailsOfRawMaterialsSparePartsAndComponentsConsumedTable",
+      "label": "Details of raw materials, spare parts and components consumed [Table]",
+      "axisCount": 2,
+      "lineItemCount": 2,
+      "axes": [
+        "in-gaap:DetailsOfRawMaterialsSparePartsAndComponentsConsumedAxis",
+        "in-gaap:SubclassificationOfRawMaterialsSparePartsAndComponentsConsumedAxis"
+      ]
+    },
+    {
+      "role": "[300700] Notes - Key managerial personnels and directors remuneration and other information",
+      "tableQ": "in-ca:DisclosureOfKeyManagerialPersonnelsAndDirectorsAndRemunerationToKeyManagerialPersonnelsAndDirectorsTable",
+      "label": "Disclosure of key managerial personnels and directors and remuneration to key managerial personnels and directors [Table]",
+      "axisCount": 1,
+      "lineItemCount": 21,
+      "axes": [
+        "in-ca:KeyManagerialPersonnelsAndDirectorsAxis"
+      ]
+    },
+    {
+      "role": "[301000a] Notes - Corporate social responsibility",
+      "tableQ": "in-gaap:ClassificationOfCSRSpendingTable",
+      "label": "Classification of CSR spending [Table]",
+      "axisCount": 1,
+      "lineItemCount": 0,
+      "axes": [
+        "in-gaap:ClassificationOfCSRSpendingAxis"
+      ]
+    },
+    {
+      "role": "[301000] Notes - Corporate social responsibility",
+      "tableQ": "in-ca:DisclosureOfNetProfitsForLastThreeFinancialYearsTable",
+      "label": "Disclosure of net profits for last three financial years [Table]",
+      "axisCount": 1,
+      "lineItemCount": 3,
+      "axes": [
+        "in-ca:NetProfitsForLastThreeFinancialYearsAxis"
+      ]
+    },
+    {
+      "role": "[400100] Disclosure of general information about company",
+      "tableQ": "in-ca:DisclosureOfPrincipalProductOrServicesTable",
+      "label": "Disclosure of principal product or services [Table]",
+      "axisCount": 1,
+      "lineItemCount": 8,
+      "axes": [
+        "in-ca:TypesOfPrincipalProductOrServicesAxis"
+      ]
+    },
+    {
+      "role": "[400200] Disclosures - Auditors report",
+      "tableQ": "in-ca:DisclosureOfAuditorsQualificationsReservationsOrAdverseRemarksInAuditorsReportTable",
+      "label": "Disclosure of auditor's qualification(s), reservation(s) or adverse remark(s) in auditors' report [Table]",
+      "axisCount": 1,
+      "lineItemCount": 25,
+      "axes": [
+        "in-ca:AuditorsQualificationsReservationsOrAdverseRemarksInAuditorsReportAxis"
+      ]
+    },
+    {
+      "role": "[400200a] Disclosures - Auditors report",
+      "tableQ": "in-ca:DetailsRegardingAuditorsTable",
+      "label": "Details regarding auditors [Table]",
+      "axisCount": 1,
+      "lineItemCount": 10,
+      "axes": [
+        "in-ca:AuditorsAxis"
+      ]
+    },
+    {
+      "role": "[400300] Disclosures - Signatories of financial statements",
+      "tableQ": "in-ca:DetailsOfDirectorsSigningFinancialStatementsTable",
+      "label": "Details of directors signing financial statements [Table]",
+      "axisCount": 1,
+      "lineItemCount": 7,
+      "axes": [
+        "in-ca:DirectorsSigningFinancialStatementsAxis"
+      ]
+    },
+    {
+      "role": "[400300a] Disclosures - Signatories of financial statements",
+      "tableQ": "in-ca:DetailsOfManagerSigningFinancialStatementsTable",
+      "label": "Details of manager signing financial statements [Table]",
+      "axisCount": 1,
+      "lineItemCount": 6,
+      "axes": [
+        "in-ca:ManagerSigningFinancialStatementsAxis"
+      ]
+    },
+    {
+      "role": "[400400] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsOfContractsArrangementsTransactionsNotAtArmsLengthBasisTable",
+      "label": "Details of contracts/arrangements/transactions not at arm's length basis [Table]",
+      "axisCount": 1,
+      "lineItemCount": 7,
+      "axes": [
+        "in-ca:ContractsArrangementsTransactionsNotAtArmsLengthBasisAxis"
+      ]
+    },
+    {
+      "role": "[400400a] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsOfMaterialContractsArrangementsTransactionsAtArmsLengthBasisTable",
+      "label": "Details of material contracts/arrangements/transactions at arm's length basis [Table]",
+      "axisCount": 1,
+      "lineItemCount": 7,
+      "axes": [
+        "in-ca:MaterialContractsArrangementsTransactionsAtArmsLengthBasisAxis"
+      ]
+    },
+    {
+      "role": "[400400b] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsOfPrincipalBusinessActivitiesContributing10PercentOrMoreOfTotalTurnoverOfCompanyTable",
+      "label": "Details of principal business activities contributing 10% or more of total turnover of company [Table]",
+      "axisCount": 1,
+      "lineItemCount": 4,
+      "axes": [
+        "in-ca:PrincipalBusinessActivitiesOfCompanyAxis"
+      ]
+    },
+    {
+      "role": "[400400c] Disclosures - Directors report",
+      "tableQ": "in-ca:ParticularsOfHoldingSubsidiaryAndAssociateCompaniesTable",
+      "label": "Particulars of holding, subsidiary and associate companies [Table]",
+      "axisCount": 1,
+      "lineItemCount": 8,
+      "axes": [
+        "in-ca:ParticularsOfCompaniesAxis"
+      ]
+    },
+    {
+      "role": "[400401] Disclosures - Directors report/total",
+      "tableQ": "in-ca:ParticularsOfHoldingSubsidiaryAndAssociateCompaniesTable",
+      "label": "Particulars of holding, subsidiary and associate companies [Table]",
+      "axisCount": 0,
+      "lineItemCount": 1,
+      "axes": []
+    },
+    {
+      "role": "[400400e] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsOfShareholdingOfPromotersTable",
+      "label": "Details of shareholding of promoters [Table]",
+      "axisCount": 1,
+      "lineItemCount": 5,
+      "axes": [
+        "in-ca:PromotersAxis"
+      ]
+    },
+    {
+      "role": "[400400f] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsOfChangeInPromotersShareholdingTable",
+      "label": "Details of change in promoters’ shareholding [Table]",
+      "axisCount": 2,
+      "lineItemCount": 6,
+      "axes": [
+        "in-ca:PromotersAxis",
+        "in-ca:ChangeInShareholdingAxis"
+      ]
+    },
+    {
+      "role": "[400400g] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsOfShareholdingPatternOfTop10ShareholdersTable",
+      "label": "Details of shareholding pattern of top 10 shareholders [Table]",
+      "axisCount": 2,
+      "lineItemCount": 6,
+      "axes": [
+        "in-ca:NameOfTop10ShareholderAxis",
+        "in-ca:ChangeInShareholdingAxis"
+      ]
+    },
+    {
+      "role": "[400400h] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsOfShareholdingPatternOfDirectorsAndKeyManagerialPersonnelTable",
+      "label": "Details of shareholding pattern of directors and key managerial personnel [Table]",
+      "axisCount": 2,
+      "lineItemCount": 6,
+      "axes": [
+        "in-ca:DirectorsAndKeyManagerialPersonnelAxis",
+        "in-ca:ChangeInShareholdingAxis"
+      ]
+    },
+    {
+      "role": "[400400i] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsOfIndebtednessOfCompanyTable",
+      "label": "Details of indebtedness of company [Table]",
+      "axisCount": 1,
+      "lineItemCount": 8,
+      "axes": [
+        "in-ca:IndebtednessAxis"
+      ]
+    },
+    {
+      "role": "[400400j] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsOfPenaltyPunishmentCompoundingOfOffenceTable",
+      "label": "Details of penalty/punishment/compounding of offence [Table]",
+      "axisCount": 1,
+      "lineItemCount": 12,
+      "axes": [
+        "in-ca:OffenderAxis"
+      ]
+    },
+    {
+      "role": "[400400k] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsRegardingAuditorsQualificationsReservationsAdverseRemarksInAuditorsReportTable",
+      "label": "Details regarding auditors' qualification(s), reservation(s) adverse remark(s) in auditors' report [Table]",
+      "axisCount": 1,
+      "lineItemCount": 2,
+      "axes": [
+        "in-ca:AuditorsQualificationsReservationsAdverseRemarksInAuditorsReportAxis"
+      ]
+    },
+    {
+      "role": "[400400l] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsRegardingCompanySecretaryQualificationOrObservationOrOtherRemarksInSecretarialAuditReportTable",
+      "label": "Details regarding company secretary qualification or observation or other remarks in secretarial audit report [Table]",
+      "axisCount": 1,
+      "lineItemCount": 2,
+      "axes": [
+        "in-ca:CompanySecretaryQualificationOrObservationOrOtherRemarksInSecretarialAuditReportAxis"
+      ]
+    },
+    {
+      "role": "[400400m] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsOfManagerialPersonnelsRemunerationTable",
+      "label": "Details of managerial personnels remuneration [Table]",
+      "axisCount": 1,
+      "lineItemCount": 3,
+      "axes": [
+        "in-ca:ManagerialPersonnelsRemunerationAxis"
+      ]
+    },
+    {
+      "role": "[400400n] Disclosures - Directors report",
+      "tableQ": "in-gaap:DisclosuresRelatingToEmployeeStockOptionSchemeTable",
+      "label": "Disclosures relating to employee stock option scheme [Table]",
+      "axisCount": 1,
+      "lineItemCount": 30,
+      "axes": [
+        "in-gaap:CategoriesOfEmployeeStockOptionSchemeAxis"
+      ]
+    },
+    {
+      "role": "[400400o] Disclosures - Directors report",
+      "tableQ": "in-gaap:DisclosuresRelatingToEmployeeStockPurchaseSchemeTable",
+      "label": "Disclosures relating to employee stock purchase scheme [Table]",
+      "axisCount": 1,
+      "lineItemCount": 8,
+      "axes": [
+        "in-gaap:CategoriesOfEmployeeStockPurchaseSchemeAxis"
+      ]
+    },
+    {
+      "role": "[400400p] Disclosures - Directors report",
+      "tableQ": "in-ca:DetailsOfDirectorsSigningBoardReportTable",
+      "label": "Details of directors signing board report [Table]",
+      "axisCount": 1,
+      "lineItemCount": 7,
+      "axes": [
+        "in-ca:DirectorsSigningBoardReportAxis"
+      ]
+    },
+    {
+      "role": "[400500] Disclosures - Secretarial audit report",
+      "tableQ": "in-ca:DetailsOfSignatoriesOfSecretarialAuditReportTable",
+      "label": "Details of signatories of secretarial audit report [Table]",
+      "axisCount": 1,
+      "lineItemCount": 9,
+      "axes": [
+        "in-ca:SignatoriesOfSecretarialAuditReportAxis"
+      ]
+    }
+  ],
+  "typedDomainElements": [
+    {
+      "q": "in-gaap:DetailsOfBondsOrDebenturesAxis",
+      "typedDomainRef": "in-gaap:in-gaap_DetailsOfBondsOrDebenturesDomain"
+    },
+    {
+      "q": "in-gaap:ClassificationOfNoncurrentInvestmentsAxis",
+      "typedDomainRef": "in-gaap:in-gaap_ClassificationOfNoncurrentInvestmentsDomain"
+    },
+    {
+      "q": "in-gaap:AcquisitionAndDisposalOfInvestmentsAxis",
+      "typedDomainRef": "in-gaap:in-gaap_AcquisitionAndDisposalOfInvestmentsDomain"
+    },
+    {
+      "q": "in-gaap:ClassificationOfCurrentInvestmentsAxis",
+      "typedDomainRef": "in-gaap:in-gaap_ClassificationOfCurrentInvestmentsDomain"
+    },
+    {
+      "q": "in-gaap:GeographicalDisclosureOfRevenueFromCustomersBasedOnCustomerLocationAxis",
+      "typedDomainRef": "in-gaap:in-gaap_GeographicalAreasBasedOnCustomerLocationDomain"
+    },
+    {
+      "q": "in-gaap:GeographicalDisclosureOfDetailsOnAssetsBasedOnLocationOfAssetsAxis",
+      "typedDomainRef": "in-gaap:in-gaap_GeographicalAreasBasedOnLocationOfAssetsDomain"
+    },
+    {
+      "q": "in-gaap:CategoriesOfRelatedPartiesAxis",
+      "typedDomainRef": "in-gaap:in-gaap_RelatedPartiesDomain"
+    },
+    {
+      "q": "in-gaap:DisclosureOfDiscontinuedOperationsAxis",
+      "typedDomainRef": "in-gaap:in-gaap_DiscontinuingOperationsDomain"
+    },
+    {
+      "q": "in-gaap:AmalgamationsAxis",
+      "typedDomainRef": "in-gaap:in-gaap_AmalgamationsDomain"
+    },
+    {
+      "q": "in-gaap:InvestmentsInAssociatesAxis",
+      "typedDomainRef": "in-gaap:in-gaap_InvestmentsInAssociatesDomain"
+    },
+    {
+      "q": "in-gaap:InterestsInSignificantJointVenturesAxis",
+      "typedDomainRef": "in-gaap:in-gaap_InterestsInSignificantJointVenturesDomain"
+    },
+    {
+      "q": "in-gaap:SubsidiariesAxis",
+      "typedDomainRef": "in-gaap:in-gaap_SubsidiariesDomain"
+    },
+    {
+      "q": "in-gaap:TypesOfEmployeeSharebasedPaymentArrangementsAxis",
+      "typedDomainRef": "in-gaap:in-gaap_EmployeeSharebasedPaymentArrangementsDomain"
+    },
+    {
+      "q": "in-gaap:RangesOfExercisePricesForOutstandingStockOptionsAxis",
+      "typedDomainRef": "in-gaap:in-gaap_RangesOfExercisePricesForOutstandingStockOptionsDomain"
+    },
+    {
+      "q": "in-gaap:CategoriesOfEmployeeStockOptionSchemeAxis",
+      "typedDomainRef": "in-gaap:in-gaap_EmployeeStockOptionSchemeDomain"
+    },
+    {
+      "q": "in-gaap:CategoriesOfEmployeeStockPurchaseSchemeAxis",
+      "typedDomainRef": "in-gaap:in-gaap_EmployeeStockPurchaseSchemeDomain"
+    },
+    {
+      "q": "in-gaap:MicroSmallMediumEnterprisesAxis",
+      "typedDomainRef": "in-gaap:in-gaap_MicroSmallMediumEnterprisesDomain"
+    },
+    {
+      "q": "in-gaap:DefinedBenefitPlansCategoriesAxis",
+      "typedDomainRef": "in-gaap:in-gaap_DefinedBenefitPlansCategoriesDomain"
+    },
+    {
+      "q": "in-gaap:AssociatesWhichAreYetToCommenceOperationsAxis",
+      "typedDomainRef": "in-gaap:in-gaap_AssociatesWhichAreYetToCommenceOperationsDomain"
+    },
+    {
+      "q": "in-gaap:AssociatesLiquidatedOrSoldDuringYearAxis",
+      "typedDomainRef": "in-gaap:in-gaap_AssociatesLiquidatedOrSoldDuringYearDomain"
+    },
+    {
+      "q": "in-gaap:JointVenturesWhichAreYetToCommenceOperationsAxis",
+      "typedDomainRef": "in-gaap:in-gaap_JointVenturesWhichAreYetToCommenceOperationsDomain"
+    },
+    {
+      "q": "in-gaap:JointVenturesLiquidatedOrSoldDuringYearAxis",
+      "typedDomainRef": "in-gaap:in-gaap_JointVenturesLiquidatedOrSoldDuringYearDomain"
+    },
+    {
+      "q": "in-gaap:EntitiesConsolidatedAxis",
+      "typedDomainRef": "in-gaap:in-gaap_EntitiesConsolidatedDomain"
+    },
+    {
+      "q": "in-gaap:SubsidiariesWhichAreYetToCommenceOperationsAxis",
+      "typedDomainRef": "in-gaap:in-gaap_SubsidiariesWhichAreYetToCommenceOperationsDomain"
+    },
+    {
+      "q": "in-gaap:SubsidiariesLiquidatedOrSoldDuringYearAxis",
+      "typedDomainRef": "in-gaap:in-gaap_SubsidiariesLiquidatedOrSoldDuringYearDomain"
+    },
+    {
+      "q": "in-gaap:ClassificationOfCSRSpendingAxis",
+      "typedDomainRef": "in-gaap:in-gaap_ClassificationOfCSRSpendingDomain"
+    },
+    {
+      "q": "in-ca:DetailsOfBalancesWithBanksAxis",
+      "typedDomainRef": "in-ca:in-ca_BanksDomain"
+    },
+    {
+      "q": "in-ca:DetailsOfBalancesWithForeignBanksAxis",
+      "typedDomainRef": "in-ca:in-ca_ForeignBanksDomain"
+    },
+    {
+      "q": "in-ca:KeyManagerialPersonnelsAndDirectorsAxis",
+      "typedDomainRef": "in-ca:in-ca_KeyManagerialPersonnelsAndDirectorsDomain"
+    },
+    {
+      "q": "in-ca:TypesOfPrincipalProductOrServicesAxis",
+      "typedDomainRef": "in-ca:in-ca_PrincipalProductOrPrincipalServicesDomain"
+    },
+    {
+      "q": "in-ca:AuditorsAxis",
+      "typedDomainRef": "in-ca:in-ca_AuditorsDomain"
+    },
+    {
+      "q": "in-ca:DirectorsSigningFinancialStatementsAxis",
+      "typedDomainRef": "in-ca:in-ca_DirectorsSigningFinancialStatementsDomain"
+    },
+    {
+      "q": "in-ca:ManagerSigningFinancialStatementsAxis",
+      "typedDomainRef": "in-ca:in-ca_ManagersSigningFinancialStatementsDomain"
+    },
+    {
+      "q": "in-ca:DirectorsSigningBoardReportAxis",
+      "typedDomainRef": "in-ca:in-ca_DirectorsSigningBoardReportDomain"
+    },
+    {
+      "q": "in-ca:AuditorsQualificationsReservationsAdverseRemarksInAuditorsReportAxis",
+      "typedDomainRef": "in-ca:in-ca_AuditorsQualificationsReservationsAdverseRemarksInAuditorsReportDomain"
+    },
+    {
+      "q": "in-ca:CompanySecretaryQualificationOrObservationOrOtherRemarksInSecretarialAuditReportAxis",
+      "typedDomainRef": "in-ca:in-ca_CompanySecretaryQualificationOrObservationOrOtherRemarksInSecretarialAuditReportDomain"
+    },
+    {
+      "q": "in-ca:ManagerialPersonnelsRemunerationAxis",
+      "typedDomainRef": "in-ca:in-ca_ManagerialPersonnelsRemunerationDomain"
+    },
+    {
+      "q": "in-ca:ParticularsOfCompaniesAxis",
+      "typedDomainRef": "in-ca:in-ca_ParticularsOfCompaniesDomain"
+    },
+    {
+      "q": "in-ca:PromotersAxis",
+      "typedDomainRef": "in-ca:in-ca_PromotersDomain"
+    },
+    {
+      "q": "in-ca:DirectorsAndKeyManagerialPersonnelAxis",
+      "typedDomainRef": "in-ca:in-ca_DirectorsAndKeyManagerialPersonnelDomain"
+    },
+    {
+      "q": "in-ca:OffenderAxis",
+      "typedDomainRef": "in-ca:in-ca_OffenderDomain"
+    },
+    {
+      "q": "in-ca:ContractsArrangementsTransactionsNotAtArmsLengthBasisAxis",
+      "typedDomainRef": "in-ca:in-ca_ContractsArrangementsTransactionsNotAtArmsLengthBasisDomain"
+    },
+    {
+      "q": "in-ca:MaterialContractsArrangementsTransactionsAtArmsLengthBasisAxis",
+      "typedDomainRef": "in-ca:in-ca_MaterialContractsArrangementsTransactionsAtArmsLengthBasisDomain"
+    },
+    {
+      "q": "in-ca:SignatoriesOfSecretarialAuditReportAxis",
+      "typedDomainRef": "in-ca:in-ca_SignatoriesOfSecretarialAuditReportDomain"
+    }
+  ]
+}

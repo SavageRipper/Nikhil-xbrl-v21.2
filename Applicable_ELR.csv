@@ -1,0 +1,49 @@
+0,1,2,3
+#,Extended Link ID,Extended Link Name,Applicable to
+1,BalanceSheet,[100100] Balance sheet,Financial Statement
+2,StatementOfProfitAndLoss,[100200] Statement of profit and loss,Financial Statement
+3,CashFlowStatementDirect,"[100300] Cash flow statement, direct",Financial Statement
+4,CashFlowStatementIndirect,"[100400] Cash flow statement, indirect",Financial Statement
+5,ShareCapital,[200100] Notes - Share capital,Financial Statement
+6,ReservesAndSurplus,[200200] Notes - Reserves and surplus,Financial Statement
+7,Borrowings,[200300] Notes - Borrowings,Financial Statement
+8,NoncurrentInvestments,[200400] Notes - Non-current investments,Financial Statement
+9,CurrentInvestments,[200500] Notes - Current investments,Financial Statement
+10,SubclassificationAndNotesOnLiabilitiesAndAssets,[200600] Notes - Subclassification and notes on liabilities and assets,Financial Statement
+11,AdditionalDisclosuresOnBalanceSheet,[200700] Notes - Additional disclosures on balance sheet,Financial Statement
+12,DisclosureOfAccountingPoliciesChangesInAccountingPoliciesAndEstimates,"[200800] Notes - Disclosure of accounting policies, changes in accounting policies and estimates",Financial Statement
+13,EventsOccurringAfterBalanceSheetDate,[200900] Notes - Events occurring after balance sheet date,Financial Statement
+14,TangibleAssets,[201000] Notes - Tangible assets,Financial Statement
+15,IntangibleAssets,[201100] Notes - Intangible assets,Financial Statement
+16,EmployeeBenefits,[201200] Notes - Employee benefits,Financial Statement
+17,Segments,[201300] Notes - Segments,Financial Statement
+18,Leases,[201400] Notes - Leases,Financial Statement
+19,Impairment,[201500] Notes - Impairment,Financial Statement
+20,RelatedParty,[201600] Notes - Related party,Financial Statement
+21,GovernmentGrants,[201700] Notes - Government grants,Financial Statement
+22,BorrowingCost,[201800] Notes - Borrowing cost,Financial Statement
+23,IncomeTaxes,[201900] Notes - Income taxes,Financial Statement
+24,DiscontinuingOperations,[202000] Notes - Discontinuing operations,Financial Statement
+25,OtherProvisionsContingentLiabilitiesAndContingentAssets,"[202100] Notes - Other provisions, contingent liabilities and contingent assets",Financial Statement
+26,EffectsOfChangesInForeignExchangeRates,[202200] Notes - Effects of changes in foreign exchange rates,Financial Statement
+27,Amalgamation,[202300] Notes - Amalgamation,Financial Statement
+28,InvestmentsInAssociates,[202400] Notes - Investments in associates,Financial Statement
+29,FinancialReportingOfInterestsInJointVentures,[202500] Notes - Financial reporting of interests in joint ventures,Financial Statement
+30,ConsolidatedFinancialStatements,[202600] Notes - Consolidated financial statements,Financial Statement
+31,CashFlowStatements,[202700] Notes - Cash flow statements,Financial Statement
+32,SubsidiaryInformation,[202800] Notes - Subsidiary information,Financial Statement
+33,Revenue,[300100] Notes - Revenue,Financial Statement
+34,ConstructionContracts,[300200] Notes - Construction contracts,Financial Statement
+35,EarningsPerShare,[300300] Notes - Earnings per share,Financial Statement
+36,EmployeeSharebasedPayments,[300400] Notes - Employee share-based payments,Financial Statement
+37,SubclassificationAndNotesOnIncomeAndExpenses,[300500] Notes - Subclassification and notes on income and expenses,Financial Statement
+38,AdditionalInformationStatementOfProfitAndLoss,[300600] Notes - Additional information statement of profit and loss,Financial Statement
+39,KeyManagerialPersonnelsAndDirectorsRemunerationAndOtherInformation,[300700] Notes - Key managerial personnels and directors remuneration and other information,Financial Statement
+40,DisclosuresPertainingToRealEstateEnterprises,[300800] Notes - Disclosures pertaining to real estate enterprises,Financial Statement
+41,FinancialInstruments,[300900] Notes - Financial instruments,Financial Statement
+42,DisclosureOfGeneralInformationAboutCompany,[400100] Disclosure of general information about company,Financial Statement
+43,AuditorsReport,[400200] Disclosures - Auditors report,Financial Statement
+44,SignatoriesOfFinancialStatements,[400300] Disclosures - Signatories of financial statements,Financial Statement
+45,DirectorsReport,[400400] Disclosures - Directors report,Financial Statement
+46,Corporate social responsibility,[301000] Notes-Corporate social responsibility,Financial Statement
+47,SecretarialAuditReport,[400500] Disclosures-Secretarial audit report,Financial Statement

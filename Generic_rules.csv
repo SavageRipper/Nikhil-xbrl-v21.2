@@ -1,0 +1,102 @@
+0,1
+,
+S. No.,Generic business rules
+1,"In tree structure, it shall be validated that the parent element is derived based on the value in child elements (applicable only if amount entered is not zero). It should be mandatory to enter atleast one child element if parent element is entered and vice-a-versa. The list of exceptions where this rule does not apply is given in sheet 'Parent child exempt-calculation'. In case an element is mandatory, then the same shall not be exempt as per this rule.
+
+"
+2,"In the dimensional table, it shall be validated that in case value is entered in any line item for any member in an axis then all the mandatory line items for that member in that axis shall be mandatory to be entered. The list of such mandatory line items is given in sheet 'Mandatory line-items'."
+3,"In the dimensional table, parent member of an axis shall be mandatory to enter in case value has been entered in any of its child members and vice versa (i.e. mandatory atleast one child element). The list of exceptions where this rule does not apply is given in sheets 'Exempt parent member - Dimension' and 'Exempt Child member-Dimension'.
+
+Further, for the following line items this rule is not applicable:
+i. DescriptionOfNatureAndPurposeOfOtherReserves
+ii. NatureOfOtherLoansAndAdvances
+iii. NatureOfOtherInventories
+iv. NatureOfOtherTangibleAssets
+v. NatureOfOtherIntangibleAssets"
+4,"In dimensional table, where the members are defined as 1, 2,3,4,5….n; then it shall be validated that the members should be provided in sequential order. For example : After member 1, member 2 should come; and  Member 4 cannot be provided directly without providing member 2 and 3."
+5,Inclusion of images/ charts/ graphs etc. shall not be allowed in the instance document.
+6,"If any financial element is entered in current year then it shall be mandatory to enter corresponding previous year. This rule shall not be applicable in case of  the  Financial statement in respect of first financial year of the company.  
+
+Financial element means any element having data type as 'Monetary'
+
+In case any financial element is entered for the previous year then corresponding value for current year should be entered.
+
+This validation shall not be applicable to the following ELRs:
+[201900] Notes - Income taxes
+
+Further, this rule shall not be applicable in case of dimensional tables.  However, in case the table itself is mandatory due to applicability of any other rule then in such case, the previous year figures shall be made as mandatory. (For eg: borrowings table is mandatory if amount of borrowings is greater than zero. Therefore, if amount of borrowings for previous year is greater than zero, then the previous year figures shall be mandatory in the dimension table)."
+7,"For elements where opening and closing balance are required to be given, there is a common element for specifying the opening and closing balance. Therefore, it is required that the Opening balance of current year be shown as the closing balance of previous year. For this, it shall be validated that the closing balance of previous year should be equal to opening balance of current year ."
+8,In elements having data type as 'Monetary'; values upto maximum 2 decimal places shall be allowed.
+9,Reporting currency should be INR in case of all financial elements except for the elements in Details of subsidiary.
+10,"All dates entered in the instance document should be greater than or equal to the date of incorporation of the filing company except for the following: 
+
+EndOfReportingPeriodOfFinancialStatementsOfAssociatesIfEndOfReportingPeriodIsDifferentFromEntitysEndOfReportingPeriod
+EndOfReportingPeriodOfFinancialStatementsOfSubsidiaryWhenDifferentFromParent
+StartDateOfAccountingPeriodOfSubsidiary
+EndDateOfAccountingPeriodOfSubsidiary
+StartDateOfAccountingPeriodOfPartnershipFirmOrAssociationOfPersonsInRespectOfWhichProfitOrLossesHaveBeenAccountedInCompanysBooksInCaseWhereYearEndingIsDifferentForPartnershipFirmOrAssociationOfPersonsAndCompany
+EndDateOfAccountingPeriodOfPartnershipFirmOrAssociationOfPersonsInRespectOfWhichProfitOrLossesHaveBeenAccountedInCompanysBooksInCaseWhereYearEndingIsDifferentForPartnershipFirmOrAssociationOfPersonsAndCompany
+DateOfBirthOfDirector
+DateToWhichCapitalOfPartnershipFirmRelates
+DateToWhichCapitalOfPartnershipFirmRelates"
+11,"Following extended links shall not be applicable in case of consolidated instance document:
+
+Notes - Subsidiary information
+Notes - Key managerial personnels and directors remuneration and other information
+Disclosures - Signatories of financial statements
+Disclosures - Directors report
+Notes - Amalgamation
+Notes - Investments in Associates
+Notes - Financial Reporting Of Interests In Joint Ventures
+Disclosures - Secretarial audit report
+Notes - Corporate social responsibility"
+12,"Following extended links shall not be applicable in case of previous financial year:
+
+Disclosures - Auditors report
+Notes - Investments in associates
+Notes - Financial reporting of interests in joint ventures
+Disclosure of general information about company (Except for the following elements- PeriodCoveredByFinancialStatements; DateOfStartOfReportingPeriod; DateOfEndOfReportingPeriod)
+Notes - Subsidiary information
+Notes - Key managerial personnels and directors remuneration and other information
+ Disclosures - Signatories of financial statements
+Disclosures - Directors report (except for 'NumberOfSharesHeld', 'NumberOfDematSharesHeld', 'NumberOfPhysicalSharesHeld' 'PercentageOfTotalSharesHeld', 'PercentageOfSharesPledgedEncumberedToTotalShares', 'PrincipalAmount', 'InterestDueButNotPaid', 'InterestAccruedButNotDue', 'Indebtedness'
+Notes - Amalgamation
+Notes - Consolidated financial statements
+Disclosures - Secretarial audit report
+[301000] Notes - Corporate social responsibility
+[301000A] Notes - Corporate social responsibility"
+13,"Extended link for DisclosureOfGeneralInformationAboutCompany shall not be applicable in case of consolidated instance document except for the following elements :
+
+DisclosureOfCompanyInformationAbstract
+NameOfCompany
+CorporateIdentityNumber
+PermanentAccountNumberOfEntity
+AddressOfRegisteredOfficeOfCompany
+TypeOfIndustry
+PeriodCoveredByFinancialStatements
+DateOfStartOfReportingPeriod
+DateOfEndOfReportingPeriod
+NatureOfReportStandaloneConsolidated
+ContentOfReport
+DescriptionOfPresentationCurrency
+LevelOfRoundingUsedInFinancialStatements
+TypeOfCashFlowStatement
+
+Values entered in these elements (except for NatureOfReportStandaloneConsolidated) should be same in standalone instance document and consolidated instance document."
+14,"Following ELR shall not be applicable in case of standalone instance document- 
+Notes - Consolidated financial statements"
+15,"In case of following tables having Multiple Axis, the following axis shall be mandatory in case the table is provided:
+
+DisclosureOfShareholdingMoreThanFivePerCentInCompanyTable- ClassesOfShareCapitalAxis, NameOfShareholderAxis
+
+ClassificationOfBorrowingsTable- ClassificationBasedOnTimePeriodAxis, ClassificationOfBorrowingsAxis, SubclassificationOfBorrowingsAxis
+
+Tangible assets table- ClassesOfTangibleAssetsAxis and CarryingAmountAccumulatedDepreciationAndGrossCarryingAmountAxis
+
+Intangible assets table- ClassesOfIntangibleAssetsAxis and CarryingAmountAccumulatedAmortizationAndImpairmentAndGrossCarryingAmountAxis.
+
+LoansAndAdvancesTable- ClassificationBasedOnTimePeriodAxis, ClassificationOfLoansAndAdvancesAxis, ClassificationOfAssetsBasedOnSecurityAxis
+
+This rule shall also be complied by using default member (if applicable) for these tables."
+16,The business rules provided are the minimum set of rules which are required to be reported. The complete information as contained in the annual accounts and related documents; and the information required to be filed with the Registrar of Companies should be reported in the XBRL instance documents to be submitted with MCA.
+17,The updated C&I Taxonomy 2016 should be used for filing annual financial statements in respect of financial years commencing on or after 01.04.2014. CNI Taxonomy 2015 shall not be available for filing henceforth.

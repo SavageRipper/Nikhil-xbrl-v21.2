@@ -1,0 +1,33 @@
+0,1
+,
+Abstract's name,Parent-Child Exemptions
+ProvisionForProposedEquityDividendAbstract,All child elements are exempt
+ProvisionForProposedPreferenceDividendAbstract,All child elements are exempt
+DepositsRefundableCurrentAbstract,All child elements are exempt
+BalanceWithBanksAbstract,All child elements are exempt
+DividendReceivableAbstract,All child elements are exempt
+BreakupOfEquityShareWarrantsAbstract,All child elements are exempt
+InterestExpenseAbstract,All child elements are exempt
+InterestExpenseLongTermLoansAbstract,All child elements are exempt
+InterestExpenseShortTermLoansAbstract,All child elements are exempt
+RatesAndTaxesExcludingTaxesOnIncomeAbstract,All child elements are exempt
+ManagerialRemunerationAbstract,All elements are exempt except 'ManagerialRemuneration'.
+RemunerationToDirectorsAbstract,All child elements are exempt
+RemunerationToManagersAbstract,All child elements are exempt
+CostTransportationAbstract,All child elements are exempt
+AdjustmentsToCarryingAmountsOfInvestmentsAbstract,All child elements are exempt
+NetProvisionsChargedAbstract,All child elements are exempt
+ContractCostAbstract,All child elements are exempt
+OverheadCostsApportionedContractsAbstract,All child elements are exempt
+BreakupOfExpenditureOnProductionTransportationAndOtherExpenditurePertainingToExplorationAndProductionActivitiesAbstract,All child elements are exempt
+RevenueContractsAbstract,All child elements are exempt
+EarningsOnExportOfGoodsCalculatedOnFOBBasisAbstract,All child elements are exempt
+KeyManagerialPersonnelOrDirectorRemunerationAbstract,All elements are exempt except 'GrossSalaryToKeyManagerialPersonnelOrDirector' and KeyManagerialPersonnelOrDirectorRemuneration.
+GrossSalaryToKeyManagerialPersonnelOrDirectorAbstract,All elements are exempt except 'GrossSalaryToKeyManagerialPersonnelOrDirector'
+Notes - Cash flow statements,"Following child elements are exempt:
+CashAndCashEquivalentsCashFlowStatement
+BankOverdraftsClassifiedAsCashEquivalents
+OtherDifferencesToCashAndCashEquivalentsInStatementOfCashFlows"
+OthersLongTermAbstract,All child elements are exempt
+OtherAdjustmentsTangibleAssetsAbstract,All child elements are exempt
+OtherAdjustmentsIntangibleAssetsAbstract,All child elements are exempt
