@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>V18 browser runtime QA</title>
+<pre id="qa">Starting…</pre>
+<script>
+(async()=>{
+  const out=[]; const pass=(name,ok,extra='')=>out.push(`${ok?'PASS':'FAIL'} | ${name}${extra?' | '+extra:''}`);
+  const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+  try{
+    await sleep(800);
+    const filingCount=state?.elrs?.length||0; pass('taxonomy loaded',filingCount===47,`${filingCount} ELRs`);
+    document.querySelector('[data-nav="filing"]')?.click(); await sleep(50);
+    const visible=[...document.querySelectorAll('[data-sec]')].filter(x=>!x.disabled).length; pass('filing tabs visible',visible===46,`${visible} visible; 400100 is on General Information`);
+    document.querySelector('[data-nav="dashboard"]')?.click(); await sleep(80);
+    pass('General Information dashboard visible',!!document.querySelector('.v18-general'));
+    const company=document.querySelector('[data-general-fact="in-ca:NameOfCompany"]'); pass('company fact control present',!!company);
+    if(company){company.value='QA TEST COMPANY';company.dispatchEvent(new Event('input',{bubbles:true}));await sleep(50);pass('general information writes an XBRL fact',state.values['in-ca:NameOfCompany']==='QA TEST COMPANY',state.values['in-ca:NameOfCompany']);}
+    const seed={'in-ca:CorporateIdentityNumber':'U51900DL1992PTC197034','in-ca:NameOfCompany':'QA TEST COMPANY','in-ca:PermanentAccountNumberOfEntity':'AADCC3160B','in-ca:DateOfStartOfReportingPeriod':'2024-04-01','in-ca:DateOfEndOfReportingPeriod':'2025-03-31','in-ca:NatureOfReportStandaloneConsolidated':'Standalone','in-ca:DescriptionOfPresentationCurrency':'INR','in-ca:LevelOfRoundingUsedInFinancialStatements':'Actual','in-ca:TypeOfCashFlowStatement':'Indirect Method'};
+    Object.assign(state.values,seed); syncGeneralInfoToProfile(); v18SyncPeriodCovered(); render(); await sleep(80);
+    pass('internal profile is derived from General Information',state.profile.cin==='U51900DL1992PTC197034'&&state.profile.fyStart==='2024-04-01'&&state.profile.fyEnd==='2025-03-31');
+    pass('current General Information fact reaches generator input',factsForGeneration('current').some(f=>f.concept==='in-ca:NameOfCompany'&&f.value==='QA TEST COMPANY'));
+    document.querySelector('[data-nav="filing"]')?.click(); await sleep(50);
+    const shareIdx=state.elrs.findIndex(e=>/Notes - Share capital/i.test(e.name));state.section=shareIdx;renderTabs();render();await sleep(100);
+    const add=document.querySelector('[data-v15-add]');pass('Share Capital add-member button present',!!add);const before=add?Object.values(state.dimTables||{}).reduce((n,x)=>n+(Array.isArray(x)?x.length:0),0):0;add?.click();await sleep(50);const after=Object.values(state.dimTables||{}).reduce((n,x)=>n+(Array.isArray(x)?x.length:0),0);pass('Add member combination works',!!add&&after===before+1,`${before}→${after}`);
+    document.querySelector('[data-nav="dashboard"]')?.click();await sleep(60);const t0=performance.now();let checkRes=null;try{checkRes=runChecks();pass('pre-scrutiny runs without runtime error',!!checkRes&&typeof checkRes.errors==='number',`${Math.round(performance.now()-t0)}ms`);}catch(e){pass('pre-scrutiny runs without runtime error',false,e.message);}
+  }catch(e){pass('runtime harness',false,e?.stack||e?.message||String(e));}
+  document.getElementById('qa').textContent=out.join('\n');
+})();
+</script>
+<script src="../app-bundled.js"></script>

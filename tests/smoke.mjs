@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const root = new URL('..', import.meta.url);
+const app=fs.readFileSync(new URL('app.js',root),'utf8');
+const bundle=fs.readFileSync(new URL('app-bundled.js',root),'utf8');
+const html=fs.readFileSync(new URL('index.html',root),'utf8');
+const css=fs.readFileSync(new URL('styles.css',root),'utf8');
+const model=JSON.parse(fs.readFileSync(new URL('TAXONOMY_MODEL.json',root),'utf8'));
+assert.match(app,/APP_VERSION='19\.0\.0'/); assert.match(app,/PROJECT_KEY='mcaCniXbrlProjectV19'/);
+assert.match(app,/LEGACY_PROJECT_KEYS=\['mcaCniXbrlProjectV17','mcaCniXbrlProjectV16','mcaCniXbrlProjectV15'/);
+assert.match(app,/MCA_SCHEMA_REF='https:\/\/www\.mca\.gov\.in\/V3XBRL\/2016\/07\/26\/Taxonomy\/CnI\/in-ci-ent-2016-03-31\.xsd'/);
+assert.match(app,/v15TableModels/); assert.match(app,/v15EnsureTableRow/); assert.match(app,/v15CreatePrimaryMemberRows/); assert.match(app,/v18SeedGeneralFromLegacyProfile/);
+assert.match(app,/cashFlowMethod/); assert.match(app,/cashFlowRoleAllowed/); assert.match(app,/TypeOfCashFlowStatement/);
+assert.match(app,/IndexedDB/); assert.match(app,/projectSnapshot/); assert.match(app,/showBusy\('Running all checks'/); assert.match(app,/showBusy\('Importing previous-year XBRL'/);
+assert.doesNotMatch(app,/if\(!profileComplete\(\)\)state\.active='dashboard'/);
+for(const token of ['auth.js','MCAAuth','loginShell','authUserBadge','auth-locked','MCA-Admin@2026#X','Secure sign-in']){assert.equal(html.includes(token),false);assert.equal(css.includes(token),false);assert.equal(app.includes(token),false);assert.equal(bundle.includes(token),false);}
+const marker=bundle.indexOf('const state=');assert.ok(marker>0);assert.equal(bundle.slice(marker),app);
+const pre=bundle.slice(0,marker); for(const x of ['"elrCount":47','"elementCount":3616','"presentationCount":4092','"calculationCount":1051','"definitionCount":2967','"typedDomainCount":44','"primaryTableCount":92','"dimensionalTableRoleCount":87']) assert.match(pre,new RegExp(x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
+assert.equal(model.tables.length,92); assert.equal(model.typedDomainElements.length,44);
+const tangible=model.tables.find(x=>x.role==='[201000] Notes - Tangible assets'); assert.ok(tangible); assert.equal(tangible.axisCount,3); assert.equal(tangible.lineItemCount,19);
+const share=model.tables.find(x=>x.role==='[200100] Notes - Share capital'); assert.ok(share); assert.equal(share.axisCount,1); assert.equal(share.lineItemCount,101);
+assert.match(html,/app-bundled\.js/); assert.match(html,/busyOverlay/); assert.equal((html.match(/<script src=/g)||[]).length,1); assert.equal(css.match(/\{/g)?.length,css.match(/\}/g)?.length);
+assert.match(app,/function cashFlowRoleAllowed\(role\)/);
+assert.doesNotMatch(app,/\/direct\/i\.test\(String\(role\|\|''\)\).*indirect/);
+console.log('V18 smoke checks: PASS');
